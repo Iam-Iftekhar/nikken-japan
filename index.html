@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Name - Home</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .hero {
+            background-image: url('https://via.placeholder.com/1500x800'); /* Replace with your hero image URL */
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            text-shadow: 2px 2px 4px #000000;
+        }
+
+        .products-section {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .product-card {
+            width: 45%;
+            height: 300px;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 20px;
+            color: white;
+            border-radius: 8px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .product-card:hover {
+            transform: scale(1.05);
+        }
+
+        .chemicals {
+            background-image: url('https://via.placeholder.com/700x300/1e90ff'); /* Replace with a chemical-themed image */
+        }
+
+        .beauty {
+            background-image: url('https://via.placeholder.com/700x300/ff69b4'); /* Replace with a beauty-themed image */
+        }
+
+        .product-card a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.5em;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px #000000;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .footer-left, .footer-right, .footer-middle {
+            flex: 1;
+            min-width: 200px;
+        }
+        .footer-left h4, .footer-right h4 {
+            margin-bottom: 10px;
+        }
+        .footer-middle {
+            text-align: center;
+        }
+        .highlight-button {
+            background-color: #f7b731;
+            color: #333;
+            padding: 15px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .highlight-button:hover {
+            background-color: #fceb5a;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">My Company</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="chemicals.html">Chemicals</a></li>
+                <li><a href="beauty.html">Beauty</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Innovative Solutions for a Better Tomorrow</h1>
+        </section>
+
+        <section class="history-section">
+            <h2>Our Story</h2>
+            <p>
+                Founded in [Year], My Company has been a pioneer in delivering high-quality chemical and beauty products. Our journey began with a simple mission: to create safe, effective, and sustainable solutions that improve people's lives and protect the environment. Over the years, we have grown from a small team of innovators into a global leader, driven by our commitment to excellence and a passion for discovery.
+            </p>
+        </section>
+
+        <section class="team-section">
+            <div class="team-member">
+                <img src="https://via.placeholder.com/200" alt="Head Person 1">
+                <div class="description-box">
+                    <h3>Jane Doe</h3>
+                    <p>Co-Founder & CEO</p>
+                    <p>A visionary leader with over 20 years of experience in the chemical industry, Jane is the driving force behind our company's innovative spirit and strategic growth.</p>
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="https://via.placeholder.com/200" alt="Head Person 2">
+                <div class="description-box">
+                    <h3>John Smith</h3>
+                    <p>Head of Product Development</p>
+                    <p>John is a renowned chemist and formulator who leads our research and development team, ensuring every product we create is of the highest quality and meets our rigorous standards.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="products-section">
+            <div class="product-card chemicals">
+                <a href="chemicals.html">Explore Our Chemicals</a>
+            </div>
+            <div class="product-card beauty">
+                <a href="beauty.html">Discover Beauty Products</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-left">
+            <h4>Locations</h4>
+            <p>123 Innovation Drive, City, Country</p>
+            <p>456 Research Blvd, Town, Country</p>
+        </div>
+        <div class="footer-middle">
+            <a href="http://www.your-other-website.com" class="highlight-button" target="_blank">Visit Our Partner Site</a>
+        </div>
+        <div class="footer-right">
+            <h4>Contact Info</h4>
+            <p>Email: contact@mycompany.com</p>
+            <p>Phone: +1 (123) 456-7890</p>
+        </div>
+    </footer>
+
+</body>
+</html>

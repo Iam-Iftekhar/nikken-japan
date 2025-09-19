@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Name - Survey</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .hero {
+            background-image: url('https://via.placeholder.com/1500x800/808080'); /* Replace with a survey-themed hero image */
+            background-size: cover;
+            background-position: center;
+            height: 40vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            text-shadow: 2px 2px 4px #000000;
+        }
+
+        .survey-container {
+            width: 80%;
+            margin: 50px auto;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .survey-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            height: 100px;
+        }
+
+        .submit-button {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background-color: #f7b731;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .submit-button:hover {
+            background-color: #fceb5a;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">My Company</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="chemicals.html">Chemicals</a></li>
+                <li><a href="beauty.html">Beauty</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Share Your Feedback with Us</h1>
+        </section>
+
+        <section class="survey-container">
+            <h2>Customer Satisfaction Survey</h2>
+            <form action="https://formspree.io/f/your-form-id" method="POST">
+                
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name (optional)">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" required placeholder="Enter your email">
+                </div>
+                
+                <div class="form-group">
+                    <label for="product_satisfaction">How satisfied are you with our products?</label>
+                    <select id="product_satisfaction" name="product_satisfaction">
+                        <option value="very_satisfied">Very Satisfied</option>
+                        <option value="satisfied">Satisfied</option>
+                        <option value="neutral">Neutral</option>
+                        <option value="dissatisfied">Dissatisfied</option>
+                        <option value="very_dissatisfied">Very Dissatisfied</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="comments">Any additional comments or suggestions?</label>
+                    <textarea id="comments" name="comments" placeholder="Your comments..."></textarea>
+                </div>
+                
+                <button type="submit" class="submit-button">Submit Survey</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-left">
+            <h4>Locations</h4>
+            <p>123 Innovation Drive, City, Country</p>
+            <p>456 Research Blvd, Town, Country</p>
+        </div>
+        <div class="footer-middle">
+            <a href="survey.html" class="highlight-button">Take Our Survey</a>
+        </div>
+        <div class="footer-right">
+            <h4>Contact Info</h4>
+            <p>Email: contact@mycompany.com</p>
+            <p>Phone: +1 (123) 456-7890</p>
+        </div>
+    </footer>
+
+</body>
+</html>
