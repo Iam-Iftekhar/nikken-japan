@@ -3,11 +3,11 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
-    color: #333;
+    color: #031716;
 }
 
 header {
-    background-color: #fff;
+    background-color: #f4f4f4;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 20px;
 }
@@ -23,6 +23,7 @@ nav {
 .logo {
     font-size: 1.5em;
     font-weight: bold;
+    color: #0C969C;
 }
 
 .nav-links {
@@ -33,14 +34,14 @@ nav {
 
 .nav-links a {
     text-decoration: none;
-    color: #555;
+    color: #032F30;
     font-weight: bold;
     transition: color 0.3s;
 }
 
 .nav-links a:hover,
 .nav-links a.active {
-    color: #f7b731;
+    color: #0A7075;
 }
 
 main {
@@ -52,15 +53,15 @@ main {
 section {
     margin-bottom: 40px;
     padding: 20px;
-    background-color: #fff;
+    background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }
 
 h2 {
     text-align: center;
-    color: #333;
-    border-bottom: 2px solid #f7b731;
+    color: #031716;
+    border-bottom: 2px solid #0C969C;
     padding-bottom: 10px;
     margin-bottom: 20px;
 }
@@ -91,12 +92,12 @@ h2 {
     height: 200px;
     border-radius: 50%;
     object-fit: cover;
-    border: 5px solid #f7b731;
+    border: 5px solid #0C969C;
 }
 
 .description-box {
     margin-top: 15px;
-    background-color: #f9f9f9;
+    background-color: #6ba3be1a; /* Using a transparent version of the light blue */
     padding: 20px;
     border-radius: 8px;
     text-align: center;
@@ -104,4 +105,37 @@ h2 {
 
 .description-box h3 {
     margin-top: 0;
+}
+
+/* Footer styles */
+footer {
+    background-color: #031716;
+    color: #f4f4f4;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.footer-left, .footer-right, .footer-middle {
+    flex: 1;
+    min-width: 200px;
+}
+.footer-left h4, .footer-right h4 {
+    margin-bottom: 10px;
+}
+.footer-middle {
+    text-align: center;
+}
+.highlight-button {
+    background-color: #274D60;
+    color: #ffffff;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+.highlight-button:hover {
+    background-color: #0C969C;
 }
