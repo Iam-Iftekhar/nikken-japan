@@ -3,73 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Company Name - Chemicals</title>
+    <title>Nikken-Japan - Chemicals</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        .hero {
-            background-image: url('https://via.placeholder.com/1500x800/032F30/6BA3BE');
-            background-size: cover;
-            background-position: center;
-            height: 40vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-align: center;
-        }
-
-        .hero h1 {
-            font-size: 3em;
-            text-shadow: 2px 2px 4px #000000;
-        }
-
-        .product-list {
-            padding: 50px 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .product-item {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            margin-bottom: 40px;
-            padding: 20px;
-            border: 1px solid #6BA3BE;
-            border-radius: 8px;
-            width: 80%;
-        }
-
-        .product-item img {
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-            border-radius: 8px;
-            border: 2px solid #0C969C;
-        }
-
-        .product-description {
-            flex: 1;
-        }
-
-        .product-description h3 {
-            margin-top: 0;
-            color: #0A7075;
-        }
-    </style>
 </head>
 <body>
 
     <header>
         <nav>
-            <div class="logo">My Company</div>
-            <ul class="nav-links">
+            <a href="index.html" class="logo">Nikken-Japan</a>
+            <ul class="nav-links" id="navLinks">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="chemicals.html" class="active">Chemicals</a></li>
                 <li><a href="beauty.html">Beauty</a></li>
                 <li><a href="#contact">Contact Us</a></li>
             </ul>
+            <!-- Google Translate button -->
+            <div id="google_translate_element"></div>
+            <!-- Hamburger Menu Button -->
+            <button class="menu-toggle" id="menuToggle"></button>
         </nav>
     </header>
 
@@ -93,6 +44,27 @@
                     <p>Another brief, compelling description of this chemical product. Highlight what makes it unique and how it can help the customer.</p>
                 </div>
             </div>
+            <div class="product-item">
+                <img src="https://via.placeholder.com/150/0C969C" alt="Product 1">
+                <div class="product-description">
+                    <h3>Product Name 1</h3>
+                    <p>A brief, compelling description of this chemical product. Mention its uses, benefits, and key features. Keep it concise and informative.</p>
+                </div>
+            </div>
+            <div class="product-item">
+                <img src="https://via.placeholder.com/150/0C969C" alt="Product 1">
+                <div class="product-description">
+                    <h3>Product Name 1</h3>
+                    <p>A brief, compelling description of this chemical product. Mention its uses, benefits, and key features. Keep it concise and informative.</p>
+                </div>
+            </div>
+            <div class="product-item">
+                <img src="https://via.placeholder.com/150/0C969C" alt="Product 1">
+                <div class="product-description">
+                    <h3>Product Name 1</h3>
+                    <p>A brief, compelling description of this chemical product. Mention its uses, benefits, and key features. Keep it concise and informative.</p>
+                </div>
+            </div>
         </section>
     </main>
 
@@ -111,6 +83,16 @@
             <p>Phone: +1 (123) 456-7890</p>
         </div>
     </footer>
+
+    <!-- Navigation Toggle Script -->
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
 
 </body>
 </html>

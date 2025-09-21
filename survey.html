@@ -3,98 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Company Name - Survey</title>
+    <title>Nikken-Japan - Survey</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        .hero {
-            background-image: url('https://via.placeholder.com/1500x800/032F30/6BA3BE');
-            background-size: cover;
-            background-position: center;
-            height: 40vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-align: center;
-        }
-
-        .hero h1 {
-            font-size: 3em;
-            text-shadow: 2px 2px 4px #000000;
-        }
-
-        .survey-container {
-            width: 80%;
-            margin: 50px auto;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            background-color: #ffffff;
-        }
-
-        .survey-container h2 {
-            text-align: center;
-            margin-bottom: 20px;
-            color: #031716;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-group label {
-            display: block;
-            font-weight: bold;
-            margin-bottom: 5px;
-            color: #031716;
-        }
-
-        .form-group input[type="text"],
-        .form-group input[type="email"],
-        .form-group textarea,
-        .form-group select {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #6BA3BE;
-            border-radius: 4px;
-            box-sizing: border-box;
-            color: #031716;
-        }
-
-        .form-group textarea {
-            resize: vertical;
-            height: 100px;
-        }
-
-        .submit-button {
-            display: block;
-            width: 100%;
-            padding: 15px;
-            background-color: #274D60;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            font-size: 1.2em;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .submit-button:hover {
-            background-color: #0C969C;
-        }
-    </style>
 </head>
 <body>
 
     <header>
         <nav>
-            <div class="logo">My Company</div>
-            <ul class="nav-links">
+            <a href="index.html" class="logo">Nikken-Japan</a>
+
+            <ul class="nav-links" id="navLinks">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="chemicals.html">Chemicals</a></li>
                 <li><a href="beauty.html">Beauty</a></li>
-                <li><a href="#">Contact Us</a></li>
+                <li><a href="#contact">Contact Us</a></li>
             </ul>
+            <!-- Google Translate button -->
+            <div id="google_translate_element"></div>
+            <!-- Hamburger Menu Button -->
+            <button class="menu-toggle" id="menuToggle"></button>
         </nav>
     </header>
 
@@ -121,7 +48,7 @@
                     <label for="product_satisfaction">How satisfied are you with our products?</label>
                     <select id="product_satisfaction" name="product_satisfaction">
                         <option value="very_satisfied">Very Satisfied</option>
-                        <option value="satisfied">Satisfied</option>
+                        <option value="satisfied">Satisfed</option>
                         <option value="neutral">Neutral</option>
                         <option value="dissatisfied">Dissatisfied</option>
                         <option value="very_dissatisfied">Very Dissatisfied</option>
@@ -147,12 +74,22 @@
         <div class="footer-middle">
             <a href="survey.html" class="highlight-button">Take Our Survey</a>
         </div>
-        <div class="footer-right">
+        <div class="footer-right" id="contact">
             <h4>Contact Info</h4>
             <p>Email: contact@mycompany.com</p>
             <p>Phone: +1 (123) 456-7890</p>
         </div>
     </footer>
+
+    <!-- Navigation Toggle Script -->
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
 
 </body>
 </html>

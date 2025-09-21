@@ -3,153 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Company Name - Home</title>
+    <title>Nikken-Japan - Home</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        /* Existing inline styles from previous response */
-        .hero {
-            background-image: url('https://via.placeholder.com/1500x800/032F30/6BA3BE');
-            background-size: cover;
-            background-position: center;
-            height: 60vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-align: center;
-        }
-
-        .hero h1 {
-            font-size: 3em;
-            text-shadow: 2px 2px 4px #000000;
-        }
-
-        /* UPDATED: Products Section styles */
-        .products-section {
-            display: flex;
-            justify-content: center;
-            gap: 30px; /* Increased gap */
-            padding: 80px 20px; /* More padding */
-            text-align: center;
-            background-color: #f4f4f4; /* Subtle background for the section */
-        }
-
-        .product-card {
-            width: 40%; /* Slightly smaller width to allow more gap */
-            height: 350px; /* Increased height */
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: center; /* Centered content vertically */
-            align-items: center; /* Centered content horizontally */
-            padding: 20px;
-            color: white;
-            border-radius: 10px; /* Slightly more rounded corners */
-            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Initial subtle shadow */
-        }
-
-        .product-card:hover {
-            transform: translateY(-10px) scale(1.02); /* Lift and slightly scale */
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* More prominent shadow on hover */
-        }
-
-        .chemicals {
-            background-image: url('https://via.placeholder.com/700x350/0C969C/ffffff?text=Our+Chemicals'); /* Distinct image with text */
-        }
-
-        .beauty {
-            background-image: url('https://via.placeholder.com/700x350/0A7075/ffffff?text=Our+Beauty+Products'); /* Distinct image with text */
-        }
-
-        .product-card a {
-            color: white;
-            text-decoration: none;
-            font-size: 2em; /* Larger font size */
-            font-weight: bold;
-            text-shadow: 2px 2px 5px #000000; /* Stronger text shadow */
-            background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent background for text */
-            padding: 15px 30px;
-            border-radius: 8px;
-            transition: background-color 0.3s ease-in-out;
-        }
-
-        .product-card a:hover {
-            background-color: rgba(0, 0, 0, 0.6); /* Darker background on hover */
-        }
-
-        /* UPDATED: Team Section styles */
-        .team-section {
-            display: flex;
-            flex-direction: row; /* Changed to row */
-            justify-content: space-around; /* Spaced out horizontally */
-            align-items: flex-start; /* Align items to the top */
-            gap: 40px;
-            padding: 60px 20px; /* Increased padding */
-            flex-wrap: wrap; /* Allow wrapping on smaller screens */
-        }
-
-        .team-member {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            max-width: 450px; /* Increased max-width */
-            padding: 20px;
-            border-radius: 10px;
-            background-color: #ffffff; /* Explicit white background */
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08); /* More noticeable shadow */
-            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-        }
-
-        .team-member:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-        }
-
-        .team-member img {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 5px solid #0C969C;
-            margin-bottom: 20px; /* Space between image and description */
-        }
-
-        .description-box {
-            margin-top: 0; /* No top margin needed here */
-            background-color: transparent; /* Make background transparent if team-member has white background */
-            padding: 0; /* Remove padding if team-member has padding */
-            border-radius: 0;
-            text-align: center;
-            box-shadow: none; /* Remove description box specific shadow if team-member has one */
-        }
-
-        .description-box h3 {
-            margin-top: 0;
-            color: #0A7075; /* Vibrant color for names */
-            font-size: 1.8em;
-            margin-bottom: 5px;
-        }
-        .description-box p {
-            margin-bottom: 10px;
-            line-height: 1.5;
-            color: #032F30; /* Darker text for description */
-        }
-    </style>
 </head>
 <body>
 
     <header>
         <nav>
-            <div class="logo">My Company</div>
-            <ul class="nav-links">
+            <a href="index.html" class="logo">Nikken-Japan</a>
+            <ul class="nav-links" id="navLinks">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="chemicals.html">Chemicals</a></li>
                 <li><a href="beauty.html">Beauty</a></li>
-                <li><a href="#">Contact Us</a></li>
+                <li><a href="#contact">Contact Us</a></li>
             </ul>
+            <!-- Google Translate button -->
+            <div id="google_translate_element"></div>
+            <!-- Hamburger Menu Button -->
+            <button class="menu-toggle" id="menuToggle"></button>
         </nav>
     </header>
 
@@ -201,14 +72,24 @@
             <p>456 Research Blvd, Town, Country</p>
         </div>
         <div class="footer-middle">
-            <a href="http://www.your-other-website.com" class="highlight-button" target="_blank">Visit Our Partner Site</a>
+            <a href="http://www.nikkenbd.com" class="highlight-button" target="http://www.nikkenbd.com">Visit Our Partner Site</a>
         </div>
-        <div class="footer-right">
+        <div class="footer-right" id="contact">
             <h4>Contact Info</h4>
             <p>Email: contact@mycompany.com</p>
             <p>Phone: +1 (123) 456-7890</p>
         </div>
     </footer>
+
+    <!-- Navigation Toggle Script -->
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
 
 </body>
 </html>
