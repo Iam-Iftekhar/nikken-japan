@@ -25,10 +25,22 @@
     <main>
         <section class="hero">
             <h1>Innovative Solutions for a Better Tomorrow</h1>
+            <div class="hero-image-container">
+                <img src="https://t3.ftcdn.net/jpg/15/71/15/92/360_F_1571159259_NRN4T4pko1VSp3bZOjhzgLFi0eFvruf0.jpg" alt="Company Hero Image">
+            </div>
         </section>
 
         <section class="history-section">
             <h2>Our Story</h2>
+            <div class="gallery-container">
+                <div class="gallery-slider">
+                    <img src="https://www.nikken-world.co.uk/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBdDRFIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--a0e07507232e2fa269ea80be29cf4fdd3eaad9c8/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9VWTI5dFltbHVaVjl2Y0hScGIyNXpld2s2RUdGMWRHOWZiM0pwWlc1MFZEb01aM0poZG1sMGVVa2lDMk5sYm5SbGNnWTZCa1ZVT2d0eVpYTnBlbVZKSWcwNE1EQjRNakkxWGdZN0NGUTZDV055YjNCSkloQTRNREI0TWpJMUt6QXJNQVk3Q0ZRPSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--e76312cd5195950b65da4e683c119c75cc644e3e/NICe-1440-x-405.png" alt="Lab Research">
+                    <img src="https://www.nikken-cm.com/wp/wp-content/uploads/top/project_YKKAP_technology_museum_bim_top-750x750.jpg" alt="Product Testing">
+                    <img src="https://www.nikken-kosakusho.co.jp/upload/news/image/image00000092.png" alt="Team Collaboration">
+                </div>
+                <button class="prev-button">‹</button>
+                <button class="next-button">›</button>
+            </div>
             <p>
                 Founded in [Year], My Company has been a pioneer in delivering high-quality chemical and beauty products. Our journey began with a simple mission: to create safe, effective, and sustainable solutions that improve people's lives and protect the environment. Over the years, we have grown from a small team of innovators into a global leader, driven by our commitment to excellence and a passion for discovery.
             </p>
@@ -86,6 +98,26 @@
 
         menuToggle.addEventListener('click', () => {
             navLinks.classList.toggle('active');
+        });
+    </script>
+    <script>
+        const slider = document.querySelector('.gallery-slider');
+        const prevButton = document.querySelector('.prev-button');
+        const nextButton = document.querySelector('.next-button');
+        let currentIndex = 0;
+
+        function updateGallery() {
+            slider.style.transform = `translateX(${-currentIndex * 100}%)`;
+        }
+
+        prevButton.addEventListener('click', () => {
+            currentIndex = (currentIndex > 0) ? currentIndex - 1 : slider.children.length - 1;
+            updateGallery();
+        });
+
+        nextButton.addEventListener('click', () => {
+            currentIndex = (currentIndex < slider.children.length - 1) ? currentIndex + 1 : 0;
+            updateGallery();
         });
     </script>
 
